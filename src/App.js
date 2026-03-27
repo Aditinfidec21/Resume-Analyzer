@@ -406,7 +406,7 @@ const LoadingScreen = () => {
   useEffect(() => {
     const t = setInterval(() => setStep((s) => Math.min(s + 1, steps.length - 1)), 1200);
     return () => clearInterval(t);
-  }, []);
+  }, [steps.length]);
   return (
     <div style={{ textAlign: "center", padding: "80px 40px", maxWidth: 500, margin: "0 auto" }}>
       <div style={{ fontSize: 64, marginBottom: 32, animation: "spin 2s linear infinite", display: "inline-block" }}>✦</div>
